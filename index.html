@@ -7,7 +7,7 @@
     <title>Sagar Gaikwad · Generative AI Engineer</title>
     <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts: Inter -->
+    <!-- Google Fonts: Inter (with fallback) -->
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..700;1,14..32,400..700&display=swap"
         rel="stylesheet">
@@ -20,44 +20,73 @@
 
         body {
             font-family: "Inter", system-ui, -apple-system, sans-serif;
-            background: #f4f7fc;
+            background: linear-gradient(145deg, #f0f5fe 0%, #e9eff9 100%);
             color: #1a2639;
             line-height: 1.5;
             padding: 2rem 1rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(2px);
-            border-radius: 2.5rem;
-            padding: 2rem 2.2rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.7);
-        }
-
-        /* ---------- avatar / logo ---------- */
-        .logo-img {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(145deg, #2563eb, #7c3aed);
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            /* organic blob */
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 2.2rem;
-            box-shadow: 0 20px 30px -10px rgba(37, 99, 235, 0.4);
-            transition: 0.2s ease;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 3rem;
+            padding: 2.5rem 2.5rem;
+            box-shadow: 0 30px 60px -15px rgba(0, 32, 64, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        /* ---------- avatar / profile image ---------- */
+        .logo-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            background: transparent;
+            box-shadow: 0 20px 30px -8px rgba(37, 99, 235, 0.3);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             border: 3px solid white;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-img::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: inherit;
+            padding: 4px;
+            background: linear-gradient(145deg, #2563eb, #a855f7, #f97316);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo-img:hover::before {
+            opacity: 1;
         }
 
         .logo-img:hover {
-            border-radius: 50% 50% 40% 60% / 50% 40% 60% 50%;
-            transform: scale(1.02);
+            transform: scale(1.02) rotate(2deg);
+            border-color: transparent;
+        }
+
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: inherit;
+            display: block;
         }
 
         /* header layout */
@@ -66,22 +95,22 @@
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 2rem;
-            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            gap: 2rem;
         }
 
         .hero-main {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1.8rem;
             flex-wrap: wrap;
         }
 
         .hero-text h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 700;
             letter-spacing: -0.02em;
-            background: linear-gradient(to right, #1e293b, #2d3c5e);
+            background: linear-gradient(135deg, #0f2b4b, #2d4b7a);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -89,54 +118,63 @@
         }
 
         .hero-text .tagline {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 500;
-            color: #2c3e6d;
-            background: rgba(37, 99, 235, 0.08);
+            color: #1e3a6b;
+            background: linear-gradient(145deg, rgba(37, 99, 235, 0.12), rgba(124, 58, 237, 0.12));
             display: inline-block;
-            padding: 0.3rem 1rem;
-            border-radius: 40px;
-            margin-top: 0.4rem;
-            border: 1px solid rgba(37, 99, 235, 0.2);
+            padding: 0.4rem 1.4rem;
+            border-radius: 60px;
+            margin-top: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
         }
 
         .contact-bar {
             display: flex;
             flex-wrap: wrap;
             gap: 1.2rem 2rem;
-            background: white;
-            padding: 1rem 1.8rem;
-            border-radius: 60px;
-            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.03);
-            border: 1px solid #eef2f6;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 1rem 2rem;
+            border-radius: 80px;
+            box-shadow: 0 20px 35px -12px rgba(0, 45, 85, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.7);
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.6rem;
-            color: #2c3e50;
-            font-size: 0.95rem;
+            gap: 0.7rem;
+            color: #1e3a5f;
+            font-size: 1rem;
             font-weight: 500;
             text-decoration: none;
-            transition: 0.15s;
+            transition: 0.2s ease;
         }
 
         .contact-item i {
             font-size: 1.2rem;
             color: #2563eb;
-            width: 1.4rem;
+            width: 1.5rem;
             text-align: center;
+            transition: transform 0.15s;
         }
 
         .contact-item:hover {
             color: #2563eb;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+        }
+
+        .contact-item:hover i {
+            transform: scale(1.15);
         }
 
         .website-link {
-            background: #eef2ff;
-            padding: 0.3rem 1rem;
+            background: #ffffffcc;
+            padding: 0.3rem 1.4rem;
             border-radius: 40px;
             font-weight: 600;
             border: 1px solid #cbd5e1;
@@ -144,78 +182,93 @@
 
         /* section styles */
         .section {
-            margin-top: 3rem;
+            margin-top: 3.5rem;
         }
 
         .section-title {
-            font-size: 1.8rem;
-            font-weight: 600;
+            font-size: 2rem;
+            font-weight: 650;
             letter-spacing: -0.01em;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
+            position: relative;
         }
 
         .section-title i {
-            background: #2563eb;
+            background: linear-gradient(145deg, #2563eb, #7c3aed);
             color: white;
-            padding: 0.5rem;
-            border-radius: 16px;
-            font-size: 1.2rem;
-            width: 2.4rem;
-            height: 2.4rem;
+            padding: 0.6rem;
+            border-radius: 24px;
+            font-size: 1.3rem;
+            width: 3rem;
+            height: 3rem;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 16px -6px #2563eb80;
+            box-shadow: 0 15px 20px -10px #2563eb80;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, #2563eb40, transparent);
+            margin-left: 1rem;
         }
 
         .summary-card {
-            background: white;
-            padding: 2rem 2rem;
-            border-radius: 2rem;
-            box-shadow: 0 10px 25px -10px #1e293b1a;
-            border: 1px solid #ffffff50;
-            font-size: 1.05rem;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 2.2rem 2.5rem;
+            border-radius: 2.5rem;
+            box-shadow: 0 20px 30px -12px #1e293b1a;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
             color: #1e293b;
             line-height: 1.7;
-            backdrop-filter: blur(4px);
-            background: rgba(255, 255, 255, 0.8);
+            transition: all 0.2s;
+        }
+
+        .summary-card:hover {
+            box-shadow: 0 30px 40px -16px #2563eb30;
         }
 
         /* skills grid */
         .skills-grid {
             display: flex;
             flex-direction: column;
-            gap: 1.8rem;
+            gap: 2rem;
         }
 
         .skill-category h3 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             color: #0f2b4b;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.7rem;
         }
 
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.6rem 0.8rem;
+            gap: 0.7rem 1rem;
         }
 
         .skill-tag {
-            background: white;
-            padding: 0.45rem 1.2rem;
-            border-radius: 40px;
-            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(4px);
+            padding: 0.5rem 1.4rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
             font-weight: 500;
-            box-shadow: 0 2px 6px #e2e8f0;
-            border: 1px solid #e9eef3;
-            transition: 0.1s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            transition: 0.15s ease;
             color: #1e293b;
         }
 
@@ -223,17 +276,26 @@
             background: #2563eb;
             color: white;
             border-color: #2563eb;
-            transform: scale(1.02);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 16px -8px #2563eb60;
         }
 
         /* experience & projects cards */
         .exp-card {
-            background: white;
-            border-radius: 2rem;
-            padding: 1.8rem 2rem;
-            margin-bottom: 1.8rem;
-            box-shadow: 0 10px 20px -10px #b0c4db;
-            border: 1px solid #f0f4fa;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border-radius: 2.5rem;
+            padding: 2rem 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 30px -12px #8ba0bb50;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.25s;
+        }
+
+        .exp-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 30px 40px -12px #2563eb40;
+            border-color: #ffffff;
         }
 
         .exp-header {
@@ -245,25 +307,29 @@
         }
 
         .exp-header h2 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 650;
-            color: #0b1f33;
+            background: linear-gradient(145deg, #0f2b4b, #2d4b7a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .exp-date {
-            background: #e1ecfe;
-            padding: 0.3rem 1.2rem;
-            border-radius: 30px;
+            background: linear-gradient(145deg, #e1ecfe, #d1e0fe);
+            padding: 0.4rem 1.5rem;
+            border-radius: 40px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #1d4ed8;
+            border: 1px solid white;
         }
 
         .exp-sub {
             font-weight: 600;
-            color: #334155;
+            color: #2e4a7a;
             margin-bottom: 1.2rem;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
         }
 
         .exp-desc {
@@ -271,86 +337,97 @@
         }
 
         .exp-desc li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.9rem;
             display: flex;
-            gap: 0.8rem;
+            gap: 1rem;
             align-items: flex-start;
         }
 
         .exp-desc li i {
             color: #2563eb;
-            font-size: 0.9rem;
+            font-size: 1rem;
             margin-top: 0.2rem;
             min-width: 1.2rem;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
             margin-top: 1rem;
         }
 
         .project-card {
-            background: white;
-            border-radius: 1.8rem;
-            padding: 1.5rem 1.5rem;
-            box-shadow: 0 8px 18px -6px #acc0d8;
-            border: 1px solid #eef4ff;
-            transition: all 0.2s;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border-radius: 2.2rem;
+            padding: 1.8rem 1.8rem;
+            box-shadow: 0 20px 25px -12px #8ba0bb50;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.25s;
         }
 
         .project-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 25px -10px #2563eb40;
+            transform: translateY(-8px);
+            box-shadow: 0 30px 35px -12px #2563eb40;
+            border-color: #ffffff;
         }
 
         .project-title {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.7rem;
+            background: linear-gradient(145deg, #1e3a6b, #2d4b7a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .project-title i {
             color: #2563eb;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            background: rgba(37, 99, 235, 0.15);
+            padding: 0.5rem;
+            border-radius: 18px;
         }
 
         .project-desc {
             color: #2d3c4f;
-            font-size: 0.95rem;
-            margin: 0.8rem 0 1rem 0;
+            font-size: 0.98rem;
+            margin: 0.8rem 0 1.2rem 0;
         }
 
         .project-bullets {
             list-style: none;
-            margin-top: 0.8rem;
+            margin-top: 1rem;
         }
 
         .project-bullets li {
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            font-size: 0.92rem;
+            margin-bottom: 0.6rem;
             display: flex;
-            gap: 0.6rem;
+            gap: 0.7rem;
         }
 
         .project-bullets i {
             color: #2563eb;
-            font-size: 0.8rem;
-            margin-top: 0.2rem;
+            font-size: 0.7rem;
+            margin-top: 0.25rem;
             width: 1rem;
         }
 
         .edu-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
-            background: white;
-            border-radius: 2rem;
-            padding: 2rem;
+            gap: 2.5rem;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(8px);
+            border-radius: 2.5rem;
+            padding: 2.2rem 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.8);
         }
 
         .edu-item {
@@ -359,37 +436,41 @@
 
         .edu-item h3 {
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1.3rem;
+            color: #0f2b4b;
         }
 
         .edu-item .meta {
-            color: #4b5563;
+            color: #2d4b7a;
             font-weight: 500;
             display: flex;
             gap: 1rem;
-            margin: 0.4rem 0 0.2rem;
+            margin: 0.4rem 0 0.4rem;
         }
 
         .edu-item .gpa {
             background: #dbeafe;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
             display: inline-block;
             font-weight: 600;
             font-size: 0.9rem;
+            color: #1e3a6b;
         }
 
         hr {
-            border: 1px solid #e9eef5;
-            margin: 1.5rem 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #2563eb30, #a855f730, transparent);
+            margin: 2.5rem 0 2rem;
         }
 
-        /* footer / tiny */
         .footnote {
             text-align: center;
-            margin-top: 3rem;
-            color: #68778d;
-            font-size: 0.9rem;
+            margin-top: 2.5rem;
+            color: #4a5f7a;
+            font-size: 0.95rem;
+            letter-spacing: 0.2px;
         }
 
         a {
@@ -398,45 +479,73 @@
         }
 
         /* responsive tweaks */
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
             .container {
-                padding: 1.5rem;
+                padding: 1.8rem;
             }
 
             .hero-main {
                 flex-direction: column;
-                align-items: start;
+                align-items: flex-start;
             }
 
             .contact-bar {
-                border-radius: 30px;
+                border-radius: 50px;
                 width: 100%;
+                justify-content: center;
             }
 
             .logo-img {
-                width: 70px;
-                height: 70px;
+                width: 85px;
+                height: 85px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
                 font-size: 1.8rem;
             }
+        }
+
+        /* subtle floating animation for profile pic */
+        @keyframes soft-float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-4px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .logo-img {
+            animation: soft-float 5s ease-in-out infinite;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <!-- Header with logo (profile image) -->
+        <!-- Header with profile image -->
         <div class="hero">
             <div class="hero-main">
                 <div class="logo-img">
-                    <img src="images/logo.jpeg" alt="Sagar Gaikwad logo"
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit;">
-                </div> <!-- custom logo / profile image -->
+                    <img src="images/profile.jpeg" alt="Sagar Gaikwad profile">
+                </div>
                 <div class="hero-text">
                     <h1>Sagar Gaikwad</h1>
                     <div class="tagline">Generative AI Engineer · 3 yrs · LLMs & RAG</div>
                 </div>
             </div>
-            <!-- contact bar with icons (matching resume) -->
+            <!-- contact bar with icons -->
             <div class="contact-bar">
                 <a href="tel:+918788134526" class="contact-item"><i class="fas fa-phone-alt"></i> +91 8788134526</a>
                 <a href="mailto:gaikwad7sagar@gmail.com" class="contact-item"><i class="fas fa-envelope"></i>
@@ -467,7 +576,6 @@
         <div class="section">
             <div class="section-title"><i class="fas fa-code"></i> Skills</div>
             <div class="skills-grid">
-                <!-- category 1 -->
                 <div class="skill-category">
                     <h3><i class="fas fa-brain" style="color:#2563eb;"></i> GenAI / Agentic</h3>
                     <div class="skill-tags">
@@ -483,7 +591,6 @@
                             Systems</span>
                     </div>
                 </div>
-                <!-- category 2 OS/Programming -->
                 <div class="skill-category">
                     <h3><i class="fab fa-python"></i> Programming & OS</h3>
                     <div class="skill-tags">
@@ -492,7 +599,6 @@
                         <span class="skill-tag">Windows</span><span class="skill-tag">macOS</span>
                     </div>
                 </div>
-                <!-- category 3 frameworks -->
                 <div class="skill-category">
                     <h3><i class="fas fa-cube"></i> Frameworks</h3>
                     <div class="skill-tags">
@@ -500,7 +606,6 @@
                             class="skill-tag">Streamlit</span>
                     </div>
                 </div>
-                <!-- category 4 databases -->
                 <div class="skill-category">
                     <h3><i class="fas fa-database"></i> Databases & vectors</h3>
                     <div class="skill-tags">
@@ -509,7 +614,6 @@
                         <span class="skill-tag">ChromaDB</span><span class="skill-tag">FAISS</span>
                     </div>
                 </div>
-                <!-- category 5 devops/mlops -->
                 <div class="skill-category">
                     <h3><i class="fas fa-cloud"></i> DevOps & MLOps</h3>
                     <div class="skill-tags">
@@ -520,7 +624,6 @@
                         <span class="skill-tag">CI/CD</span><span class="skill-tag">Vltur</span>
                     </div>
                 </div>
-                <!-- category 6 APIs & data -->
                 <div class="skill-category">
                     <h3><i class="fas fa-plug"></i> APIs & Data</h3>
                     <div class="skill-tags">
@@ -570,62 +673,50 @@
                     <div class="project-title"><i class="fas fa-gavel"></i> Lawttorney.ai</div>
                     <div class="project-desc">Legal document RAG with 100k+ records, PDF chat & Elasticsearch.</div>
                     <ul class="project-bullets">
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Scraped 100k+ docs (latestlaws,
-                            indiankanoon) with BeautifulSoup/Scrapy</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Metadata extraction via Gemini (95%
-                            accuracy)</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> BM25 + dense search, reduced
-                            research time 40% (est.)</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Async caching, FastAPI deployment
-                        </li>
+                        <li><i class="fas fa-circle"></i> Scraped 100k+ docs (latestlaws, indiankanoon) with
+                            BeautifulSoup/Scrapy</li>
+                        <li><i class="fas fa-circle"></i> Metadata extraction via Gemini (95% accuracy)</li>
+                        <li><i class="fas fa-circle"></i> BM25 + dense search, reduced research time 40% (est.)</li>
+                        <li><i class="fas fa-circle"></i> Async caching, FastAPI deployment</li>
                     </ul>
                 </div>
                 <!-- PropertySearch.ai -->
                 <div class="project-card">
                     <div class="project-title"><i class="fas fa-home"></i> PropertySearch.ai</div>
                     <ul class="project-bullets">
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> FAISS similarity search over 500k
-                            listings, sub‑second latency</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Google Maps API for nearby
-                            amenities → 25% relevance lift</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Plotly/Dash dashboards + A/B
-                            testing framework</li>
+                        <li><i class="fas fa-circle"></i> FAISS similarity search over 500k listings, sub‑second latency
+                        </li>
+                        <li><i class="fas fa-circle"></i> Google Maps API for nearby amenities → 25% relevance lift</li>
+                        <li><i class="fas fa-circle"></i> Plotly/Dash dashboards + A/B testing framework</li>
                     </ul>
                 </div>
                 <!-- BoardSearch.ai -->
                 <div class="project-card">
                     <div class="project-title"><i class="fas fa-user-tie"></i> BoardSearch.ai</div>
                     <ul class="project-bullets">
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Dual‑side matching: BERT profile
-                            embeddings + collaborative filtering</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> OpenAI GPT for auto resume &
-                            interview questions</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> FastAPI + React, Dockerized with
-                            analytics dashboards</li>
+                        <li><i class="fas fa-circle"></i> Dual‑side matching: BERT profile embeddings + collaborative
+                            filtering</li>
+                        <li><i class="fas fa-circle"></i> OpenAI GPT for auto resume & interview questions</li>
+                        <li><i class="fas fa-circle"></i> FastAPI + React, Dockerized with analytics dashboards</li>
                     </ul>
                 </div>
                 <!-- God.ai -->
                 <div class="project-card">
                     <div class="project-title"><i class="fas fa-palette"></i> God.ai</div>
                     <ul class="project-bullets">
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Stable Diffusion for Indian
-                            deities, cultural fine‑tuning</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> multi‑step: query → LLM prompt →
-                            safety → image gen</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Celery + Redis async, React
-                            frontend</li>
+                        <li><i class="fas fa-circle"></i> Stable Diffusion for Indian deities, cultural fine‑tuning</li>
+                        <li><i class="fas fa-circle"></i> multi‑step: query → LLM prompt → safety → image gen</li>
+                        <li><i class="fas fa-circle"></i> Celery + Redis async, React frontend</li>
                     </ul>
                 </div>
                 <!-- FewAgent.ai -->
                 <div class="project-card">
                     <div class="project-title"><i class="fas fa-robot"></i> FewAgent.ai</div>
                     <ul class="project-bullets">
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Multi‑agent (LangChain + Groq)
-                            dynamic tool selection</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> Real‑time APIs: stocks, weather,
-                            travel, NewsAPI, Alpha Vantage</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.4rem;"></i> 90% tool accuracy, fallback Google
-                            search, Dockerized</li>
+                        <li><i class="fas fa-circle"></i> Multi‑agent (LangChain + Groq) dynamic tool selection</li>
+                        <li><i class="fas fa-circle"></i> Real‑time APIs: stocks, weather, travel, NewsAPI, Alpha
+                            Vantage</li>
+                        <li><i class="fas fa-circle"></i> 90% tool accuracy, fallback Google search, Dockerized</li>
                     </ul>
                 </div>
             </div>
@@ -648,19 +739,18 @@
             </div>
         </div>
 
-        <!-- subtle extra link + footnote (github.io again) -->
         <hr>
         <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-            <span style="background: #f0f4fe; padding: 0.3rem 1.2rem; border-radius: 40px;"><i
+            <span style="background: #f0f4fe; padding: 0.4rem 1.5rem; border-radius: 50px;"><i
                     class="fab fa-github"></i> gaikwadsagar97</span>
-            <span style="background: #f0f4fe; padding: 0.3rem 1.2rem; border-radius: 40px;"><i
+            <span style="background: #f0f4fe; padding: 0.4rem 1.5rem; border-radius: 50px;"><i
                     class="fas fa-map-pin"></i> Pune, India</span>
-            <span style="background: #f0f4fe; padding: 0.3rem 1.2rem; border-radius: 40px;"><i
+            <span style="background: #f0f4fe; padding: 0.4rem 1.5rem; border-radius: 50px;"><i
                     class="fas fa-calendar-alt"></i> 3+ years in GenAI</span>
         </div>
         <div class="footnote">
-            ✦ built from resume · Sagar Gaikwad ✦ <a href="https://gaikwadsagar97.github.io/" target="_blank"
-                style="text-decoration: underline;">gaikwadsagar97.github.io</a>
+            ✦ crafted from resume · Sagar Gaikwad ✦ <a href="https://gaikwadsagar97.github.io/" target="_blank"
+                style="text-decoration: underline; font-weight: 500;">gaikwadsagar97.github.io</a>
         </div>
     </div>
 </body>
