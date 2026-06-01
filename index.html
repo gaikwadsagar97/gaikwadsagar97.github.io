@@ -486,29 +486,28 @@
       margin-bottom: 2.5rem;
       max-width: 500px;
     }
+    /* Masonry using CSS columns — images show at full natural height */
     .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-auto-rows: 240px;
-      gap: 0.8rem;
+      columns: 3;
+      column-gap: 0.8rem;
     }
     .gallery-item {
-      overflow: hidden;
+      break-inside: avoid;
+      margin-bottom: 0.8rem;
       border-radius: 0.7rem;
+      overflow: hidden;
       position: relative;
       cursor: pointer;
       background: var(--surface2);
-    }
-    .gallery-item.wide { grid-column: span 2; }
-    .gallery-item.tall { grid-row: span 2; }
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
       display: block;
     }
-    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item img {
+      width: 100%;
+      height: auto;          /* ← full image, no crop */
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
     .gallery-item-overlay {
       position: absolute;
       inset: 0;
@@ -675,8 +674,7 @@
       .hero-desc { margin: 0 auto 2rem; }
       section { padding: 4rem 2rem; }
       .about-grid, .projects-grid, .exp-highlights, .edu-grid { grid-template-columns: 1fr; }
-      .gallery-grid { grid-template-columns: 1fr 1fr; }
-      .gallery-item.wide, .gallery-item.tall { grid-column: span 1; grid-row: span 1; }
+      .gallery-grid { columns: 2; }
       footer { padding: 2rem; flex-direction: column; text-align: center; }
       .divider { margin: 0 2rem; }
       nav { padding: 1rem 1.5rem; }
@@ -896,7 +894,7 @@
 
   <div class="gallery-grid">
     <!-- Formal portrait — wide feature -->
-    <div class="gallery-item wide" onclick="openLightbox(this)">
+    <div class="gallery-item" onclick="openLightbox(this)">
       <img src="IMG_9767.HEIC" alt="Sagar Gaikwad formal portrait in black suit" loading="lazy" />
       <div class="gallery-item-overlay"></div>
       <div class="gallery-item-label">Studio Portrait</div>
@@ -924,7 +922,7 @@
     </div>
 
     <!-- Lakeside monsoon -->
-    <div class="gallery-item wide" onclick="openLightbox(this)">
+    <div class="gallery-item" onclick="openLightbox(this)">
       <img src="IMG-20250826-WA0099.jpg" alt="Sagar Gaikwad by lakeside during monsoon" loading="lazy" />
       <div class="gallery-item-overlay"></div>
       <div class="gallery-item-label">Monsoon Lakeside</div>
