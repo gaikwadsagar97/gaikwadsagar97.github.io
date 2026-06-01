@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- PRIMARY SEO -->
+  <title>Sagar Gaikwad — Generative AI Engineer | RAG & LLM Systems Specialist | Pune</title>
+  <meta name="description" content="Sagar Gaikwad is a Generative AI Engineer and RAG & LLM Systems Specialist based in Pune, Maharashtra with 4+ years building production AI systems. GitHub: gaikwadsagar97." />
+  <meta name="keywords" content="Sagar Gaikwad, Sagar Gaikwad AI Engineer, Sagar Gaikwad Pune, gaikwadsagar97, RAG Engineer, LLM Engineer, Generative AI Engineer, GenAI Engineer Pune, Lawttorney AI, BoardSearch AI, PropertySearch AI, CYperts Digital Solutions" />
+  <meta name="author" content="Sagar Gaikwad" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://gaikwadsagar97.github.io/" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Sagar Gaikwad — Generative AI Engineer" />
+  <meta property="og:description" content="4+ years building production-grade AI systems across legal-tech, PropTech, and HR-tech. LLM · RAG · DevOps · Pune, India." />
+  <meta property="og:url" content="https://gaikwadsagar97.github.io/" />
+  <meta property="og:image" content="https://gaikwadsagar97.github.io/og-image.jpg" />
+  <meta property="profile:first_name" content="Sagar" />
+  <meta property="profile:last_name" content="Gaikwad" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sagar Gaikwad — Generative AI Engineer" />
+  <meta name="twitter:description" content="4+ years building production-grade AI systems. RAG · LLM · DevOps · Pune." />
+
+  <!-- STRUCTURED DATA (JSON-LD) — helps Google surface your name prominently -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sagar Gaikwad",
+    "alternateName": "gaikwadsagar97",
+    "url": "https://gaikwadsagar97.github.io/",
+    "image": "https://gaikwadsagar97.github.io/og-image.jpg",
+    "email": "gaikwad7sagar@gmail.com",
+    "telephone": "+918788134526",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "jobTitle": "Generative AI Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "CYperts Digital Solutions Pvt. Ltd"
+    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "JSPM's Engineering College, Pune"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Modern College, Pune"
+      }
+    ],
+    "sameAs": [
+      "https://github.com/gaikwadsagar97",
+      "https://linkedin.com/in/sagar-gaikwad723445253"
+    ],
+    "knowsAbout": [
+      "Generative AI",
+      "Large Language Models",
+      "Retrieval-Augmented Generation",
+      "LangChain",
+      "FastAPI",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "GCP",
+      "Python",
+      "DevOps"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #090c10;
+      --surface: #0f1318;
+      --surface2: #161b22;
+      --border: rgba(255,255,255,0.07);
+      --text: #e8eaed;
+      --muted: #8b949e;
+      --accent: #f0a500;
+      --accent2: #ff6b35;
+      --accent3: #00d4aa;
+      --grad: linear-gradient(135deg, #f0a500, #ff6b35);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Mono', monospace;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ===== NOISE OVERLAY ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* ===== NAV ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(9,12,16,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 4rem;
+      padding: 8rem 5rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #hero::after {
+      content: '';
+      position: absolute;
+      top: -200px; right: -200px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(240,165,0,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(240,165,0,0.1);
+      border: 1px solid rgba(240,165,0,0.3);
+      border-radius: 2rem;
+      padding: 0.35rem 1rem;
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+    }
+    .badge-dot {
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    .hero-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.0;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-name span {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .hero-desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .stat { }
+    .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+    .stat-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 0.4rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.78rem;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+    }
+    .btn-primary {
+      background: var(--grad);
+      color: #000;
+      font-weight: 600;
+      border: none;
+    }
+    .btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* HERO PHOTO */
+    .hero-photo-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero-photo-frame {
+      position: relative;
+      width: 340px;
+      height: 420px;
+    }
+    .hero-photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      background: var(--grad);
+      border-radius: 1.5rem;
+      z-index: 0;
+    }
+    .hero-photo-frame img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1.4rem;
+      display: block;
+    }
+    .hero-photo-tag {
+      position: absolute;
+      bottom: -16px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.72rem;
+      color: var(--accent3);
+      white-space: nowrap;
+      z-index: 2;
+    }
+    .floating-badge {
+      position: absolute;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 0.6rem;
+      padding: 0.5rem 0.8rem;
+      font-size: 0.68rem;
+      color: var(--text);
+      white-space: nowrap;
+      z-index: 3;
+    }
+    .fb1 { top: 20px; right: -60px; animation: floatY 3s ease-in-out infinite; }
+    .fb2 { bottom: 40px; left: -60px; animation: floatY 3s ease-in-out 1.5s infinite; }
+    @keyframes floatY {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* ===== SECTION COMMON ===== */
+    section { padding: 5rem 5rem; }
+    .section-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 800;
+      margin-bottom: 3rem;
+      line-height: 1.1;
+    }
+
+    /* ===== ABOUT ===== */
+    #about { background: var(--surface); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .about-text p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 1rem;
+    }
+    .about-contacts {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .contact-row a { color: var(--accent3); text-decoration: none; }
+    .contact-row a:hover { text-decoration: underline; }
+    .contact-icon { font-size: 1rem; }
+
+    .about-skills { }
+    .skill-group { margin-bottom: 1.5rem; }
+    .skill-group-label {
+      font-size: 0.68rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.6rem;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .skill-tag {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.7rem;
+      border-radius: 0.3rem;
+      font-size: 0.7rem;
+      color: var(--text);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ===== PROJECTS ===== */
+    #projects { background: var(--bg); }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad);
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .project-card:hover { border-color: rgba(240,165,0,0.3); transform: translateY(-4px); }
+    .project-card:hover::before { opacity: 1; }
+    .project-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .project-name {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+    .project-desc {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+    }
+    .project-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+    .stack-pill {
+      background: rgba(240,165,0,0.08);
+      border: 1px solid rgba(240,165,0,0.2);
+      padding: 0.2rem 0.55rem;
+      border-radius: 0.2rem;
+      font-size: 0.62rem;
+      color: var(--accent);
+    }
+    .project-metric {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.72rem;
+      color: var(--accent3);
+    }
+
+    /* ===== GALLERY ===== */
+    #gallery { background: var(--surface); }
+    .gallery-intro {
+      font-size: 0.83rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      max-width: 500px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 240px;
+      gap: 0.8rem;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 0.7rem;
+      position: relative;
+      cursor: pointer;
+      background: var(--surface2);
+    }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-item.tall { grid-row: span 2; }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+    .gallery-item-label {
+      position: absolute;
+      bottom: 0.8rem;
+      left: 0.8rem;
+      font-size: 0.7rem;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .gallery-item:hover .gallery-item-label { opacity: 1; }
+
+    /* LIGHTBOX */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    #lightbox.active { display: flex; }
+    #lightbox img {
+      max-width: 80vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 0.6rem;
+    }
+    #lightbox-close {
+      position: absolute;
+      top: 1.5rem; right: 1.5rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 1.2rem;
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ===== EXPERIENCE ===== */
+    #experience { background: var(--bg); }
+    .exp-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      max-width: 900px;
+    }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .exp-role {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+    .exp-company { color: var(--accent); font-size: 0.85rem; }
+    .exp-period {
+      background: rgba(240,165,0,0.08);
+      border: 1px solid rgba(240,165,0,0.2);
+      padding: 0.3rem 0.8rem;
+      border-radius: 0.3rem;
+      font-size: 0.72rem;
+      color: var(--accent);
+    }
+    .exp-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    .highlight {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .highlight::before { content: '▸'; color: var(--accent); flex-shrink: 0; }
+
+    /* ===== EDUCATION ===== */
+    #education { background: var(--surface); }
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .edu-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 0.8rem;
+      padding: 1.8rem;
+    }
+    .edu-degree {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+    .edu-school { color: var(--accent3); font-size: 0.8rem; margin-bottom: 0.3rem; }
+    .edu-year { color: var(--muted); font-size: 0.72rem; }
+    .edu-gpa {
+      margin-top: 0.6rem;
+      font-size: 0.75rem;
+      color: var(--accent);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 3rem 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .footer-name {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.78rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+    .footer-copy { color: var(--muted); font-size: 0.72rem; }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0 5rem;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      #hero { grid-template-columns: 1fr; padding: 7rem 2rem 3rem; text-align: center; }
+      .hero-photo-wrap { order: -1; }
+      .hero-stats { justify-content: center; }
+      .hero-cta { justify-content: center; }
+      .hero-desc { margin: 0 auto 2rem; }
+      section { padding: 4rem 2rem; }
+      .about-grid, .projects-grid, .exp-highlights, .edu-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item.wide, .gallery-item.tall { grid-column: span 1; grid-row: span 1; }
+      footer { padding: 2rem; flex-direction: column; text-align: center; }
+      .divider { margin: 0 2rem; }
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .fb1, .fb2 { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#hero">SG</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Available for opportunities
+    </div>
+    <h1 class="hero-name">Sagar<br /><span>Gaikwad</span></h1>
+    <p class="hero-title">Generative AI Engineer · RAG & LLM Specialist · DevOps</p>
+    <p class="hero-desc">
+      Building production-grade AI systems that ship. 4+ years designing LLM pipelines,
+      hybrid search architectures, and cloud-native infrastructure across legal-tech, PropTech, and HR-tech.
+    </p>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100k+</div>
+        <div class="stat-label">Docs Processed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">SaaS Products Shipped</div>
+      </div>
+    </div>
+    <div class="hero-cta">
+      <a href="mailto:gaikwad7sagar@gmail.com" class="btn btn-primary">✉ Get in Touch</a>
+      <a href="https://github.com/gaikwadsagar97" target="_blank" rel="noopener" class="btn btn-ghost">⌥ GitHub</a>
+      <a href="https://linkedin.com/in/sagar-gaikwad723445253" target="_blank" rel="noopener" class="btn btn-ghost">in LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="hero-photo-wrap">
+    <div class="hero-photo-frame">
+      <img src="image___.jpg" alt="Sagar Gaikwad — Generative AI Engineer, Pune" />
+      <div class="hero-photo-tag">📍 Pune, Maharashtra</div>
+      <div class="floating-badge fb1">⚡ LLM · RAG · DevOps</div>
+      <div class="floating-badge fb2">🏗 3 Products Shipped</div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" aria-label="About Sagar Gaikwad">
+  <div class="section-label">// About</div>
+  <h2 class="section-title">Who I Am</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I'm <strong>Sagar Gaikwad</strong>, a Generative AI Engineer from Pune, Maharashtra. I specialise in
+        the full LLM lifecycle — from data ingestion and hybrid retrieval (BM25 + dense vectors) to prompt
+        engineering, LLM evaluation, and cloud deployment.
+      </p>
+      <p>
+        At CYperts Digital Solutions, I led a 3-person AI team shipping production GenAI products.
+        My work on Lawttorney.ai processed 100,000+ legal documents with 95% metadata-extraction
+        accuracy, cutting user research time by 40%.
+      </p>
+      <p>
+        Every system I build is benchmarked against latency, accuracy, and user engagement baselines —
+        because measurable outcomes are what matter.
+      </p>
+      <div class="about-contacts">
+        <div class="contact-row"><span class="contact-icon">✉</span><a href="mailto:gaikwad7sagar@gmail.com">gaikwad7sagar@gmail.com</a></div>
+        <div class="contact-row"><span class="contact-icon">📞</span><span>+91 8788134526</span></div>
+        <div class="contact-row"><span class="contact-icon">⌥</span><a href="https://github.com/gaikwadsagar97" target="_blank" rel="noopener">github.com/gaikwadsagar97</a></div>
+        <div class="contact-row"><span class="contact-icon">in</span><a href="https://linkedin.com/in/sagar-gaikwad723445253" target="_blank" rel="noopener">linkedin.com/in/sagar-gaikwad723445253</a></div>
+      </div>
+    </div>
+
+    <div class="about-skills">
+      <div class="skill-group">
+        <div class="skill-group-label">LLM & GenAI</div>
+        <div class="skill-tags">
+          <span class="skill-tag">LangChain</span>
+          <span class="skill-tag">OpenAI API</span>
+          <span class="skill-tag">Gemini API</span>
+          <span class="skill-tag">Claude API</span>
+          <span class="skill-tag">HuggingFace</span>
+          <span class="skill-tag">Prompt Engineering</span>
+          <span class="skill-tag">Google ADK</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">RAG & Search</div>
+        <div class="skill-tags">
+          <span class="skill-tag">RAG Systems</span>
+          <span class="skill-tag">Hybrid Search</span>
+          <span class="skill-tag">Elasticsearch</span>
+          <span class="skill-tag">ChromaDB</span>
+          <span class="skill-tag">FAISS</span>
+          <span class="skill-tag">pgvector</span>
+          <span class="skill-tag">BM25</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Backend & DevOps</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Kubernetes</span>
+          <span class="skill-tag">AWS</span>
+          <span class="skill-tag">GCP</span>
+          <span class="skill-tag">Terraform</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">Prometheus</span>
+          <span class="skill-tag">ArgoCD</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-label">Databases</div>
+        <div class="skill-tags">
+          <span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">Elasticsearch</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" aria-label="Projects by Sagar Gaikwad">
+  <div class="section-label">// Projects</div>
+  <h2 class="section-title">Key Products Shipped</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-icon">⚖️</div>
+      <div class="project-name">Lawttorney.ai</div>
+      <p class="project-desc">
+        Legal research platform with hybrid RAG (BM25 + dense vectors) over 100k+ Indian legal documents.
+        PDF chat feature slashed research time by 40%.
+      </p>
+      <div class="project-stack">
+        <span class="stack-pill">Python</span>
+        <span class="stack-pill">FastAPI</span>
+        <span class="stack-pill">Elasticsearch</span>
+        <span class="stack-pill">Gemini LLM</span>
+        <span class="stack-pill">pgvector</span>
+        <span class="stack-pill">Scrapy</span>
+        <span class="stack-pill">Docker</span>
+      </div>
+      <div class="project-metric">✓ 95% metadata extraction accuracy · 40% faster research</div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🏠</div>
+      <div class="project-name">PropertySearch.ai</div>
+      <p class="project-desc">
+        Real-estate recommendation engine over 500k+ listings using content-based filtering + pgvector similarity search.
+        Sub-second p95 latency.
+      </p>
+      <div class="project-stack">
+        <span class="stack-pill">FastAPI</span>
+        <span class="stack-pill">pgvector</span>
+        <span class="stack-pill">Google Maps API</span>
+        <span class="stack-pill">Plotly/Dash</span>
+        <span class="stack-pill">PostgreSQL</span>
+        <span class="stack-pill">Terraform</span>
+        <span class="stack-pill">AWS</span>
+      </div>
+      <div class="project-metric">✓ +25% recommendation relevance · A/B tested at p&lt;0.05</div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">💼</div>
+      <div class="project-name">BoardSearch.ai</div>
+      <p class="project-desc">
+        AI-powered dual-sided recruitment matching using BERT embeddings and collaborative filtering.
+        Automated resume generation via GPT.
+      </p>
+      <div class="project-stack">
+        <span class="stack-pill">FastAPI</span>
+        <span class="stack-pill">React</span>
+        <span class="stack-pill">BERT</span>
+        <span class="stack-pill">OpenAI GPT</span>
+        <span class="stack-pill">Docker</span>
+        <span class="stack-pill">Kubernetes</span>
+        <span class="stack-pill">GitLab CI</span>
+      </div>
+      <div class="project-metric">✓ 28% above rule-based baseline · −15 min recruiter shortlisting</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" aria-label="Photos of Sagar Gaikwad">
+  <div class="section-label">// Gallery</div>
+  <h2 class="section-title">Beyond the Code</h2>
+  <p class="gallery-intro">A snapshot of life outside the terminal — from Rajasthan sand dunes to monsoon lakesides.</p>
+
+  <div class="gallery-grid">
+    <!-- Formal portrait — wide feature -->
+    <div class="gallery-item wide" onclick="openLightbox(this)">
+      <img src="IMG_9767.HEIC" alt="Sagar Gaikwad formal portrait in black suit" loading="lazy" />
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-label">Studio Portrait</div>
+    </div>
+
+    <!-- Sunset shot -->
+    <div class="gallery-item tall" onclick="openLightbox(this)">
+      <img src="IMG_20250420_023032.jpg" alt="Sagar Gaikwad at sunset with mountain backdrop" loading="lazy" />
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-label">Sunset Vibes</div>
+    </div>
+
+    <!-- Temple railing -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="IMG_20250216_205800.jpg" alt="Sagar Gaikwad at a temple" loading="lazy" />
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-label">Temple Visit</div>
+    </div>
+
+    <!-- Desert -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="1754165525781.jpg" alt="Sagar Gaikwad at Rajasthan desert sand dunes" loading="lazy" />
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-label">Rajasthan Desert</div>
+    </div>
+
+    <!-- Lakeside monsoon -->
+    <div class="gallery-item wide" onclick="openLightbox(this)">
+      <img src="IMG-20250826-WA0099.jpg" alt="Sagar Gaikwad by lakeside during monsoon" loading="lazy" />
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-label">Monsoon Lakeside</div>
+    </div>
+
+    <!-- Studio black suit -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="c2a399f0-5165-42e9-9655-0df229ca7c1a.png" alt="Sagar Gaikwad with a friend at corporate campus" loading="lazy" />
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-label">Corporate Campus</div>
+    </div>
+
+    <!-- Office campus with friend -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="IMG20251017115224.jpg" alt="Sagar Gaikwad outdoors" loading="lazy" />
+      <div class="gallery-item-overlay"></div>
+      <div class="gallery-item-label">Outdoor</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" aria-label="Work experience of Sagar Gaikwad">
+  <div class="section-label">// Experience</div>
+  <h2 class="section-title">Where I've Built</h2>
+  <div class="exp-card">
+    <div class="exp-header">
+      <div>
+        <div class="exp-role">GenAI Engineer</div>
+        <div class="exp-company">CYperts Digital Solutions Pvt. Ltd · Pune, Maharashtra</div>
+      </div>
+      <div class="exp-period">Jan 2022 – Mar 2026</div>
+    </div>
+    <div class="exp-highlights">
+      <div class="highlight">Architected RAG pipelines (BM25 + dense vectors), reducing latency 20% and improving answer relevance 35%.</div>
+      <div class="highlight">Built LLM evaluation framework tracking hallucination rates, retrieval precision, and user satisfaction.</div>
+      <div class="highlight">Property & job recommendation engines lifted user engagement by 32% via 30-day cohort A/B tests.</div>
+      <div class="highlight">Tuned HNSW index parameters for sub-second p95 latency on 500k+ document corpora.</div>
+      <div class="highlight">Async processing + Redis caching enabled 3× concurrent user load without degradation.</div>
+      <div class="highlight">Full CI/CD via GitHub Actions & GitLab CI: lint, test, Docker builds, zero-downtime deployments.</div>
+      <div class="highlight">IaC with Terraform across AWS (EC2, S3, Lambda, CloudWatch) and GCP (Cloud Run, GCS).</div>
+      <div class="highlight">Prometheus + Grafana + ELK Stack: reduced mean time-to-detect incidents by ~50%.</div>
+      <div class="highlight">Kubernetes (Helm + ArgoCD): HPA/VPA, pod disruption budgets, rolling updates, tested to 500 concurrent users.</div>
+      <div class="highlight">Collaborated with cross-functional teams to enforce SLA targets and zero-downtime releases.</div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" aria-label="Education of Sagar Gaikwad">
+  <div class="section-label">// Education</div>
+  <h2 class="section-title">Academic Background</h2>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-degree">Master of Computer Applications (MCA)</div>
+      <div class="edu-school">JSPM's Engineering College, Pune</div>
+      <div class="edu-year">2020 – 2022</div>
+      <div class="edu-gpa">GPA: 8.1 / 10</div>
+      <p style="font-size:0.72rem; color:var(--muted); margin-top:0.8rem; line-height:1.6;">
+        Dissertation: "Context-aware document retrieval using sentence embeddings" — directly applied in the Lawttorney.ai RAG architecture.
+      </p>
+    </div>
+    <div class="edu-card">
+      <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+      <div class="edu-school">Modern College, Pune</div>
+      <div class="edu-year">2017 – 2020</div>
+      <div class="edu-gpa">GPA: 6.1 / 10</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="divider"></div>
+<footer>
+  <div class="footer-name">Sagar Gaikwad</div>
+  <div class="footer-links">
+    <a href="mailto:gaikwad7sagar@gmail.com">Email</a>
+    <a href="https://github.com/gaikwadsagar97" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://linkedin.com/in/sagar-gaikwad723445253" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <div class="footer-copy">© 2026 Sagar Gaikwad · Pune, Maharashtra · gaikwadsagar97.github.io</div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-label="Image viewer">
+  <button id="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+  <img id="lightbox-img" src="" alt="Gallery photo of Sagar Gaikwad" />
+</div>
+
+<script>
+  function openLightbox(el) {
+    const img = el.querySelector('img');
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-img').alt = img.alt;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Subtle scroll-reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.project-card, .exp-card, .edu-card, .gallery-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
